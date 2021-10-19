@@ -132,7 +132,11 @@ nav.appendChild(wrapper);
 
 window.addEventListener('scroll', () => {
     sections.forEach(element => {
-        if (isLocatedInViewport(element)) {
+        // I checked the whole section but the result is not satisfing
+        // As the section may be bigger than screen and will not fit, therefore it will not be active
+        // So alternativly, I'm checking the position of h2 tag 
+        // I thought it might be better as a user experience
+        if (isLocatedInViewport(element.querySelector('h2'))) {
             element.classList.add('your-active-class');
             let activeLink = nav.querySelector(`[data-nav=${element.id}]`);
             activeLink.classList.add("active-link");
@@ -190,12 +194,3 @@ scrolltotop.addEventListener('click', () => {
 });
 
 addsectionbutton.addEventListener('click', AddNewSection);
-
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
-
