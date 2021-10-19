@@ -22,11 +22,11 @@
 */
 
 
-let nav = document.querySelector('#navbar__list');
 let sections = document.querySelectorAll('section');
+let nav = document.querySelector('#navbar__list');
 let header = document.querySelector('header');
 
-const addsectionbutton = document.querySelector('#btn');
+const addsectionbutton = document.querySelector('#newsectionbtn');
 const scrolltotop = document.querySelector('#top');
 
 var isScrolling;
@@ -98,9 +98,10 @@ function isLocatedInViewport(element) {
 function CreateNavItem(datanav, id) {
     let newElem = document.createElement('li');
     newElem.style.cssText = 'float:left;';
+    newElem.classList.add('menu__link');
 
     let newA = document.createElement('a');
-    newA.style.cssText = 'display:block; padding:8px; background-color:#dddddd';
+    // newA.style.cssText = 'display:block; padding:8px; background-color:#dddddd';
     newA.innerText = datanav;
     newA.setAttribute('href', `#${id}`);
     newA.setAttribute('data-nav', id);
