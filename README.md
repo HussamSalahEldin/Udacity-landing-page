@@ -25,6 +25,3 @@ Just open the index.html and see the magic happens :)
 
 There is no dependecies for this project.
 [(Back to top)](#table-of-contents)
-
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
