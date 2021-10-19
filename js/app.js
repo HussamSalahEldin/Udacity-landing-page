@@ -76,7 +76,7 @@ function AddNewSection() {
 * @param {HTMLElement} element: The element we need to check
 * @returns {boolean} Does the element located in the viewport or not
 */
-function isInViewport(element) {
+function isLocatedInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
         rect.top >= 0 &&
@@ -132,7 +132,7 @@ nav.appendChild(wrapper);
 
 window.addEventListener('scroll', () => {
     sections.forEach(element => {
-        if (isInViewport(element)) {
+        if (isLocatedInViewport(element)) {
             element.classList.add('your-active-class');
             let activeLink = nav.querySelector(`[data-nav=${element.id}]`);
             activeLink.classList.add("active-link");
