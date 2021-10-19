@@ -61,6 +61,35 @@ section {
 }
 
 
+#newsectionbtn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.btn-style {
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.active-link {
+    color: red;
+}
+
+#top {  
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    visibility: hidden;
+}
+
+
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
@@ -189,46 +218,12 @@ section:nth-of-type(3n + 1) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-#btn {
-    position: absolute;
-    top: 100%;
-    /* border-radius: 0px 39px 0px 20px; */
-    width: 10em;
-    height: 2.8em;
-    /* outline: 0px;
-    border: 0px; */
-    font-size: 18.5px;
-    font-weight: bold;
-    background-color: hotpink;
-    color: white;
-    cursor: pointer;
-}
-
-.active-link {
-    color: red;
-    background-color: blue;
-}
-
-#top {
-    /* border-radius: 60px 60px 0px 0px; */
-    background-color: #e91e63;
-    width: 87px;
-    height: 45px;
-    text-align: center;
-    line-height: 47px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    visibility: hidden;
-}
-
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(100, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 section.your-active-class .landing__container::before {
